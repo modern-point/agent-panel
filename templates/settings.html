@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agent – Ustawienia</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h2>Ustawienia agenta</h2>
+
+<form method="post" action="/settings">
+
+    <label>Nadawca (Gmail):</label><br>
+    <input type="email" name="sender_email" value="{{ data.sender_email }}"><br><br>
+
+    <label>Hasło aplikacji Gmail:</label><br>
+    <input type="password" name="sender_password" value="{{ data.sender_password }}"><br><br>
+
+    <label>Odbiorca (Outlook):</label><br>
+    <input type="email" name="recipient_email" value="{{ data.recipient_email }}"><br><br>
+
+    <label>OpenRouter API Key:</label><br>
+    <input type="text" name="openrouter_api_key" value="{{ data.openrouter_api_key }}"><br><br>
+
+    <label>Promień (km):</label><br>
+    <input type="number" name="radius_km" value="{{ data.radius_km }}"><br><br>
+
+    <label>Minimalna ocena:</label><br>
+    <input type="number" name="min_score" value="{{ data.min_score }}"><br><br>
+
+    <button type="submit">Zapisz</button>
+</form>
+
+<br>
+<a href="/logs">Logi</a>
+
+</body>
+</html>
